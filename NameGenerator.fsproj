@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="NamesParser.fs" />
+    <Compile Include="NamesParserSpec.fs" />
     <Compile Include="NameSelector.fs" />
     <Compile Include="NameSelectorSpec.fs" />
     <Compile Include="Program.fs" />
