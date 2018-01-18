@@ -5,11 +5,12 @@ open NameGenerator.NamesParser
 
 let firstNames = NamesParser.FirstNames
 let lastNames = NamesParser.LastNames
-let nameIndex = 1
+let nameIndex = 0
+let seedIndex = 1
 
-let selectName seed (nameList: string[][]) =
+let selectName (seed: float) (nameList: string[][]) =
   let rec loop iter =
-    if seed < nameList.[iter].[nameIndex] then nameList.[iter].[nameIndex]
+    if seed < (float nameList.[iter].[seedIndex]) then nameList.[iter].[nameIndex]
     else loop (iter + 1)
   loop 0
 
