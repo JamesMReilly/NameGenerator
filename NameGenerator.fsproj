@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="NamesParser.fs" />
+    <Compile Include="NameSelector.fs" />
+    <Compile Include="NameSelectorSpec.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.net.test.sdk" Version="15.5.0" />
+    <PackageReference Include="nunit" Version="3.9.0" />
+    <PackageReference Include="nunit3testadapter" Version="3.9.0" />
+    <PackageReference Include="unquote" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>
