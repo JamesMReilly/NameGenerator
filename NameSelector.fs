@@ -4,7 +4,7 @@ open NameGenerator.NamesParser
 
 let selectName (seed: float) (probList: float[]) =
   let rec loop iter =
-    if seed < probList.[iter] then iter
+    if seed <= probList.[iter] then iter
     else loop (iter + 1)
   loop 0
 
