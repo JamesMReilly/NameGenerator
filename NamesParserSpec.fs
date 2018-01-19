@@ -8,8 +8,8 @@ open NameGenerator.NamesParser
 
 [<Test>]
 let ``most common first name is james`` () =
-  test <@ FirstNames.[0].[0] = "James" @>
+  test <@ FirstNames.[0] = "James" @>
 
 [<Test>]
 let ``most common name occurs 4% of the time`` () =
-  test <@ (float FirstNames.[0].[1]) = 4.000@>
+  test <@ (float FirstNameProbability.[0]) = 4.000@>
