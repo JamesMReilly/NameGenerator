@@ -4,13 +4,17 @@ open System
 open NameGenerator.NamesParser   
 open NameGenerator.NameSelector
 
+let tupleRandomFloats (randomObject: System.Random) =
+  (randomObject.NextDouble() * 100. , randomObject.NextDouble() * 100.)
+
+
 [<EntryPoint>]
 let main argv =
-  let foo = FirstNames
-  let snap = foo.[0]
-  
-  printfn "%s\n" snap
+  let rnd = new Random()
+  let (firstSeed,lastSeed) = rnd |> tupleRandomFloats
+  let firstName = SelectFirstName firstSeed
+  let lastName = SelectLastName lastSeed
 
-  let crackle = SelectFirstName 0.
-  printfn "%s\n" crackle
+  printfn "%s %s\n" firstName lastName
+
   0 // return an integer exit code

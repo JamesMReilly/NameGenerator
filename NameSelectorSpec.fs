@@ -15,6 +15,7 @@ let ``grabs 1st firstname when given a seed of 0`` () =
 let ``grabs second name when given a seed marginally greater than first probability`` () =
   let seed = FirstNameProbability.[0] + 0.001
   test <@ SelectFirstName seed = FirstNames.[1] @>
+  test <@ SelectFirstName seed <> FirstNames.[0] @>
 
 [<Test>]
 let ``can specific last name from probability`` () =
