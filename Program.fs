@@ -1,7 +1,6 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open System
-open NameGenerator.NamesParser   
 open NameGenerator.NameSelector
 
 let tupleRandomFloats (randomObject: System.Random) =
@@ -28,6 +27,5 @@ let main argv =
   match argv with
     | [| Int n |] when n > 0 -> n |> generateNRandomNames rnd
     | _ -> 1 |> generateNRandomNames rnd
-  
   
   0 // return an integer exit code
