@@ -15,3 +15,15 @@ let SelectFirstName seed =
 let SelectLastName seed =
   let index = seed |> selectName LastNameProbability
   LastNames.[index]
+
+let generateARandomName (firstSeed, lastSeed) =
+  let firstName = SelectFirstName firstSeed
+  let lastName = SelectLastName lastSeed
+  printfn "%s %s" firstName lastName
+
+let tupleRandomFloats (randomObject: System.Random) =
+  (randomObject.NextDouble() * 100. , randomObject.NextDouble() * 100.)
+
+let GenerateNFullNames rnd n =
+  for i in 1 .. n do
+    rnd |> tupleRandomFloats |> generateARandomName
