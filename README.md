@@ -1,7 +1,7 @@
 # NameGenerator
 Random name generator using F# targeting .NET Framework
 
-Built using Visual Studio Code targeting net46
+Built using Visual Studio Code targeting net46 <br/>
 NUnit and Unquote for F# unit tests
 
 Inspired by goofy names seen while playing EA Sports NCAA Football 13 with my brother 
