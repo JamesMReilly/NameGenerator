@@ -2,7 +2,6 @@ module NameGenerator.Specs.NamesParserSpec
 
 open NUnit.Framework
 open Swensen.Unquote
-open System
 
 open NameGenerator.NamesParser
 

@@ -2,7 +2,6 @@ module NameGenerator.Specs.NameSelector
 
 open NUnit.Framework
 open Swensen.Unquote
-open System
 
 open NameGenerator.NameSelector
 open NameGenerator.NamesParser
@@ -18,6 +17,6 @@ let ``grabs second name when given a seed marginally greater than first probabil
   test <@ SelectFirstName seed <> FirstNames.[0] @>
 
 [<Test>]
-let ``can specific last name from probability`` () =
+let ``can select a specific last name from probability`` () =
   let seed = LastNameProbability.[30]
   test <@ SelectLastName seed = LastNames.[30] @>
