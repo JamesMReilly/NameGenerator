@@ -15,6 +15,6 @@ let main argv =
   let firstName = SelectFirstName firstSeed
   let lastName = SelectLastName lastSeed
 
-  printfn "%s %s\n" firstName lastName
+  printfn "%s %s" firstName lastName
 
   0 // return an integer exit code
